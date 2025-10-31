@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduCode - FAQ</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Edu<span class="accent">Code</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="course.html">Courses</a>
+      <a href="practice.html">Practice</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="faq.html">FAQ</a>
+      <a href="dashboard.html" class="btn-login">Dashboard</a>
+    </nav>
+    <div class="menu-icon" id="menu-toggle">Menu</div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    
+    <div class="search-bar">
+      <input type="text" id="faqSearch" placeholder="Search FAQs..." />
+    </div>
+
+    <div id="faqList">
+      <!-- FAQ items will be injected by JavaScript -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div><h4>EduCode</h4><p>Made for students.</p></div>
+      <div><h4>Learn</h4><a href="course.html">Courses</a><a href="practice.html">Practice</a><a href="faq.html">FAQ</a></div>
+      <div><h4>Connect</h4><a href="#">GitHub</a><a href="#">Discord</a><a href="#">Contact</a></div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> EduCode</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
