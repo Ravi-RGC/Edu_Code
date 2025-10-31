@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBMS Course - EduCode</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Edu<span class="accent">Code</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="course.html">Courses</a>
+      <a href="practice.html">Practice</a>
+      <a href="dashboard.html" class="btn-login">Dashboard</a>
+    </nav>
+  </header>
+
+  <section class="course-page section">
+    <h1>Database Management System</h1>
+    <div class="course-meta">
+      <span class="tag advanced">Advanced</span>
+      <span>200+ SQL Queries • Normalization • Indexing</span>
+      <span>Certificate on Completion</span>
+    </div>
+
+    <div class="video-player">
+      <iframe src="https://www.youtube.com/embed/7S_tz1z_5bA" allowfullscreen></iframe>
+    </div>
+
+    <div class="modules" id="dbmsModules">
+      <!-- Injected by JS -->
+    </div>
+
+    <button class="btn-primary" onclick="markComplete('dbms')">Mark Course Complete</button>
+  </section>
+
+  <footer>
+    <p class="footer-copy">© <span id="year"></span> EduCode</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
