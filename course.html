@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduCode - All Courses</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Edu<span class="accent">Code</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="course.html">Courses</a>
+      <a href="practice.html">Practice</a>
+      <a href="faq.html">FAQ</a>
+      <a href="dashboard.html" class="btn-login">Dashboard</a>
+    </nav>
+    <div class="menu-icon" id="menu-toggle">Menu</div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">All Courses</h2>
+    <div class="cards">
+      <div class="card" onclick="location.href='courses_dsa.html'">
+        <div class="tag beginner">Beginner</div>
+        <h3>Data Structures & Algorithms</h3>
+        <p>500+ problems, video lectures, notes</p>
+        <button class="card-btn">View Course</button>
+      </div>
+      <div class="card" onclick="location.href='courses_webd.html'">
+        <div class="tag intermediate">Intermediate</div>
+        <h3>Full Stack Web Development</h3>
+        <p>Build 10+ projects</p>
+        <button class="card-btn">View Course</button>
+      </div>
+      <div class="card" onclick="location.href='courses_dbms.html'">
+        <div class="tag advanced">Advanced</div>
+        <h3>Database Management</h3>
+        <p>SQL, NoSQL, Indexing</p>
+        <button class="card-btn">View Course</button>
+      </div>
+      <div class="card" onclick="location.href='courses_python.html'">
+        <div class="tag beginner">Beginner</div>
+        <h3>Python Programming</h3>
+        <p>From zero to hero</p>
+        <button class="card-btn">View Course</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div><h4>EduCode</h4><p>Made for students.</p></div>
+      <div><h4>Learn</h4><a href="course.html">Courses</a><a href="practice.html">Practice</a><a href="faq.html">FAQ</a></div>
+      <div><h4>Connect</h4><a href="#">GitHub</a><a href="#">Discord</a><a href="#">Contact</a></div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> EduCode</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
