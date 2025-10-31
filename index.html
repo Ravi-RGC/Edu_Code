@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduCode - Learn to Code for Free</title>
+  <meta name="description" content="Master coding skills with interactive challenges, expert-led courses, and real-world projects. Learn DSA, Web Development, DBMS, and Python programming for free.">
+  <meta name="keywords" content="coding, programming, DSA, web development, database, python, free courses, practice problems">
+  <meta name="author" content="EduCode">
+  <meta property="og:title" content="EduCode - Learn to Code for Free">
+  <meta property="og:description" content="Join 50,000+ students learning coding with interactive challenges and expert courses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://educode.com">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/e85a4f/ffffff?text=EduCode">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EduCode - Learn to Code for Free">
+  <meta name="twitter:description" content="Master coding skills with interactive challenges and expert courses.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630/e85a4f/ffffff?text=EduCode">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32x32/e85a4f/ffffff?text=EC">
+  <link rel="apple-touch-icon" href="https://via.placeholder.com/180x180/e85a4f/ffffff?text=EC">
+  <meta name="theme-color" content="#e85a4f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="EduCode">
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script>
+    // Theme preloader to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const shouldBeDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+      
+      if (shouldBeDark) {
+        document.body.classList.add('dark-mode');
+      }
+    })();
+  </script>
+  <header class="navbar">
+    <div class="navbar-brand">
+      <div class="logo">Edu<span class="accent">Code</span></div>
+      <div class="logo-tagline">Learn. Code. Succeed.</div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="course.html" class="nav-link">
+        <span class="nav-icon">📚</span>
+        <span>Courses</span>
+      </a>
+      <a href="practice.html" class="nav-link">
+        <span class="nav-icon">💻</span>
+        <span>Practice</span>
+      </a>
+      <a href="leaderboard.html" class="nav-link">
+        <span class="nav-icon">🏆</span>
+        <span>Leaderboard</span>
+      </a>
+      <a href="faq.html" class="nav-link">
+        <span class="nav-icon">❓</span>
+        <span>FAQ</span>
+      </a>
+      <a href="dashboard.html" class="btn-login">
+        <span class="nav-icon">📊</span>
+        <span>Dashboard</span>
+      </a>
+    </nav>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="theme-toggle" 
+              title="Toggle Dark/Light Mode" 
+              aria-label="Toggle between dark and light mode"
+              aria-pressed="false"
+              role="switch">
+        <span class="sr-only">Toggle theme</span>
+        <div class="theme-toggle-track">
+          <div class="theme-toggle-thumb">
+            <span class="theme-icon sun-icon" aria-hidden="true">☀️</span>
+            <span class="theme-icon moon-icon" aria-hidden="true">🌙</span>
+          </div>
+        </div>
+      </button>
+      <button class="notification-btn" title="Notifications">
+        <span class="notification-icon">🔔</span>
+        <span class="notification-badge">3</span>
+      </button>
+      <div class="menu-icon" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search courses, problems..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Trusted by 50,000+ Students Worldwide</div>
+      <h1>Master <span class="accent">Coding</span> Skills That Matter</h1>
+      <p class="hero-subtitle">Join India's fastest-growing coding platform. Learn Data Structures, Algorithms, Web Development, and Database Management with interactive challenges, expert-led courses, and real-world projects.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Practice Problems</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Video Courses</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Learning Support</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="course.html" class="btn-primary">
+          <span>🎯 Start Learning Free</span>
+        </a>
+        <a href="practice.html" class="btn-secondary">
+          <span>💻 Practice Coding</span>
+        </a>
+      </div>
+      <div class="hero-features">
+        <span>✅ No Credit Card Required</span>
+        <span>✅ Industry Expert Instructors</span>
+        <span>✅ Certificate on Completion</span>
+      </div>
+    </div>
+    <div class="hero-image floating">
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="window-header">
+            <div class="window-controls">
+              <span class="control red"></span>
+              <span class="control yellow"></span>
+              <span class="control green"></span>
+            </div>
+            <span class="window-title">EduCode Editor</span>
+          </div>
+          <div class="code-content">
+            <div class="code-line"><span class="keyword">function</span> <span class="function">solveProblem</span>() {</div>
+            <div class="code-line">  <span class="keyword">const</span> <span class="variable">skills</span> = <span class="string">'unlimited'</span>;</div>
+            <div class="code-line">  <span class="keyword">return</span> <span class="variable">success</span>;</div>
+            <div class="code-line">}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose EduCode?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Interactive Learning</h3>
+          <p>Learn by doing with our hands-on coding challenges and real-time feedback system.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Industry Recognition</h3>
+          <p>Get certificates recognized by top tech companies and boost your career prospects.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Community Support</h3>
+          <p>Join 50,000+ active learners, participate in discussions, and get help when needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Progress Tracking</h3>
+          <p>Monitor your learning journey with detailed analytics and personalized recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Master In-Demand Skills</h2>
+        <p class="section-subtitle">Choose from our comprehensive curriculum designed by industry experts</p>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card premium" onclick="location.href='courses_dsa.html'">
+          <div class="course-header">
+            <div class="course-badge">Most Popular</div>
+            <div class="course-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-text">4.9 (2.5K reviews)</span>
+            </div>
+          </div>
+          <div class="course-icon">🧠</div>
+          <h3>Data Structures & Algorithms</h3>
+          <p class="course-description">Master problem-solving with comprehensive DSA coverage. From basic arrays to advanced dynamic programming.</p>
+          <div class="course-stats">
+            <span>📚 500+ Problems</span>
+            <span>🎥 40 Hours</span>
+            <span>🏆 Certificate</span>
+          </div>
+          <div class="course-progress">
+            <div class="progress-info">
+              <span>Your Progress</span>
+              <span>70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="original-price">₹4,999</span>
+              <span class="current-price">FREE</span>
+            </div>
+            <button class="course-btn">Continue Learning</button>
+          </div>
+        </div>
+
+        <div class="course-card" onclick="location.href='courses_webd.html'">
+          <div class="course-header">
+            <div class="course-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-text">4.8 (1.8K reviews)</span>
+            </div>
+          </div>
+          <div class="course-icon">🌐</div>
+          <h3>Full Stack Web Development</h3>
+          <p class="course-description">Build modern web applications with React, Node.js, and MongoDB. Create 10+ real-world projects.</p>
+          <div class="course-stats">
+            <span>🚀 10+ Projects</span>
+            <span>🎥 60 Hours</span>
+            <span>💼 Job Ready</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="original-price">₹7,999</span>
+              <span class="current-price">FREE</span>
+            </div>
+            <button class="course-btn">Start Course</button>
+          </div>
+        </div>
+
+        <div class="course-card" onclick="location.href='courese_dbms.html'">
+          <div class="course-header">
+            <div class="course-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-text">4.7 (1.2K reviews)</span>
+            </div>
+          </div>
+          <div class="course-icon">🗄️</div>
+          <h3>Database Management Systems</h3>
+          <p class="course-description">Master SQL, NoSQL, database design, and optimization techniques used by top companies.</p>
+          <div class="course-stats">
+            <span>📊 200+ Queries</span>
+            <span>🎥 35 Hours</span>
+            <span>🔧 Hands-on</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="original-price">₹3,999</span>
+              <span class="current-price">FREE</span>
+            </div>
+            <button class="course-btn">Explore Course</button>
+          </div>
+        </div>
+
+        <div class="course-card" onclick="location.href='courses_python.html'">
+          <div class="course-header">
+            <div class="course-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-text">4.9 (3.1K reviews)</span>
+            </div>
+          </div>
+          <div class="course-icon">🐍</div>
+          <h3>Python Programming</h3>
+          <p class="course-description">Learn Python from basics to advanced. Perfect for beginners and experienced programmers alike.</p>
+          <div class="course-stats">
+            <span>🎯 100+ Exercises</span>
+            <span>🎥 45 Hours</span>
+            <span>🤖 AI/ML Ready</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="original-price">₹2,999</span>
+              <span class="current-price">FREE</span>
+            </div>
+            <button class="course-btn">Begin Journey</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Success Stories</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"EduCode helped me crack my dream job at Google! The DSA course is incredibly comprehensive and the practice problems are exactly what you face in interviews."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Rahul Sharma" class="author-avatar">
+            <div class="author-info">
+              <h4>Rahul Sharma</h4>
+              <p>Software Engineer at Google</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The web development course is outstanding! I built my first full-stack application and landed a job as a frontend developer within 3 months."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Priya Patel" class="author-avatar">
+            <div class="author-info">
+              <h4>Priya Patel</h4>
+              <p>Frontend Developer at Flipkart</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"As a college student, EduCode's free courses gave me the skills I needed to secure internships at top tech companies. Highly recommended!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Arjun Singh" class="author-avatar">
+            <div class="author-info">
+              <h4>Arjun Singh</h4>
+              <p>SDE Intern at Microsoft</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">50,000+</div>
+          <div class="stat-label">Active Learners</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Practice Problems</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Job Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9/5</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Coding Journey?</h2>
+        <p>Join 50,000+ students who are already mastering coding skills with EduCode. Start learning today - it's completely free!</p>
+        <div class="cta-buttons">
+          <a href="course.html" class="btn-primary large">
+            <span>🚀 Start Learning Now</span>
+          </a>
+          <a href="practice.html" class="btn-secondary large">
+            <span>💻 Practice Problems</span>
+          </a>
+        </div>
+        <div class="cta-features">
+          <span>✅ No Credit Card Required</span>
+          <span>✅ Instant Access</span>
+          <span>✅ Learn at Your Own Pace</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">Edu<span class="accent">Code</span></div>
+          <p class="footer-description">Empowering the next generation of developers with world-class coding education. Learn, practice, and succeed with India's most trusted coding platform.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="GitHub">
+              <span>📱</span>
+            </a>
+            <a href="#" class="social-link" title="Discord">
+              <span>💬</span>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+              <span>🐦</span>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+              <span>💼</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Learn</h4>
+            <a href="courses_dsa.html">Data Structures & Algorithms</a>
+            <a href="courses_webd.html">Web Development</a>
+            <a href="courese_dbms.html">Database Management</a>
+            <a href="courses_python.html">Python Programming</a>
+            <a href="practice.html">Practice Problems</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#">Community</a>
+            <a href="#">Blog</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Report Bug</a>
+            <a href="#">Feature Request</a>
+            <a href="#">Status</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-stats">
+          <span>🎯 50,000+ Active Learners</span>
+          <span>📚 5,000+ Practice Problems</span>
+          <span>🏆 95% Job Success Rate</span>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> EduCode. Made with ❤️ for students in India. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <button class="modal-close">x</button>
+      <div class="auth-container">
+        <h3>Login to EduCode</h3>
+        <form id="loginForm">
+          <input type="email" placeholder="Email" value="user@educode.com" required />
+          <input type="password" placeholder="Password" value="123456" required />
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p class="switch-text">Demo: <strong>user@educode.com</strong> / 123456</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="theme-toggle.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
