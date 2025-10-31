@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Course - EduCode</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Edu<span class="accent">Code</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="course.html">Courses</a>
+      <a href="practice.html">Practice</a>
+      <a href="dashboard.html" class="btn-login">Dashboard</a>
+    </nav>
+  </header>
+
+  <section class="section course-page">
+    <h1>Data Structures & Algorithms</h1>
+    <div class="video-player">
+      <iframe src="https://www.youtube.com/embed/8hly31xKli0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="modules" id="dsaModules">
+      <!-- Modules will be injected by JavaScript -->
+    </div>
+    <button class="btn-primary" onclick="markComplete('dsa')">Mark Complete</button>
+  </section>
+
+  <footer><p class="footer-copy">© <span id="year"></span> EduCode</p></footer>
+  <script src="index.js"></script>
+</body>
+</html>
