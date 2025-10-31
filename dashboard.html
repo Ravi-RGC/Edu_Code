@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduCode - Dashboard</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo">Edu<span class="accent">Code</span></div>
+    <nav class="sidebar-menu">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="course.html">My Courses</a>
+      <a href="practice.html">Practice</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="dashboard-main">
+    <header class="dash-header">
+      <h2>Welcome back, <span class="accent">Student!</span></h2>
+      <p>Keep coding, keep growing!</p>
+    </header>
+
+    <!-- STATS GRID -->
+    <div class="dash-grid">
+      <div class="dash-card">
+        <h3>Progress</h3>
+        <p>5 Courses • 78% Avg</p>
+        <div class="progress-bar"><div style="width:78%"></div></div>
+        <div class="streak">7 day streak!</div>
+      </div>
+
+      <div class="dash-card">
+        <h3>Problems Solved</h3>
+        <p>87 / 500</p>
+        <div class="progress-bar"><div style="width:17.4%"></div></div>
+        <p><strong>Goal:</strong> 500 problems</p>
+      </div>
+
+      <div class="dash-card">
+        <h3>XP Earned</h3>
+        <p>3,450 XP</p>
+        <div class="progress-bar"><div style="width:69%"></div></div>
+        <p>Next level: <strong>5,000 XP</strong></p>
+      </div>
+
+      <div class="dash-card">
+        <h3>Badges</h3>
+        <div class="badges">
+          <span class="badge">Array Ninja</span>
+          <span class="badge">100 Problems</span>
+          <span class="badge">Streak Master</span>
+          <span class="badge">Web Dev Pro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+    <div class="section">
+      <h3 class="section-title">Recent Activity</h3>
+      <div class="activity-list">
+        <div class="activity-item">
+          <span class="activity-icon">Checkmark</span>
+          <div>
+            <p><strong>Solved "Two Sum"</strong> • Easy</p>
+            <small>2 hours ago</small>
+          </div>
+        </div>
+        <div class="activity-item">
+          <span class="activity-icon">Checkmark</span>
+          <div>
+            <p><strong>Completed "Arrays" module</strong></p>
+            <small>Yesterday</small>
+          </div>
+        </div>
+        <div class="activity-item">
+          <span class="activity-icon">Trophy</span>
+          <div>
+            <p><strong>Earned "Streak Master" badge</strong></p>
+            <small>3 days ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MINI LEADERBOARD -->
+    <div class="section">
+      <h3 class="section-title">Top 5 This Week</h3>
+      <div class="leaderboard">
+        <div class="leaderboard-header">Rank • Name • Problems</div>
+        <div class="leaderboard-row">
+          <span class="rank rank-1">1</span>
+          <span>Aarav Sharma</span>
+          <span>142</span>
+        </div>
+        <div class="leaderboard-row">
+          <span class="rank rank-2">2</span>
+          <span>Priya Patel</span>
+          <span>138</span>
+        </div>
+        <div class="leaderboard-row">
+          <span class="rank rank-3">3</span>
+          <span>Rahul Kumar</span>
+          <span>129</span>
+        </div>
+        <div class="leaderboard-row">
+          <span class="rank">4</span>
+          <span>You</span>
+          <span>87</span>
+        </div>
+        <div class="leaderboard-row">
+          <span class="rank">5</span>
+          <span>Sneha Reddy</span>
+          <span>85</span>
+        </div>
+      </div>
+      <button class="btn-primary" style="margin-top:16px; width:100%;">View Full Leaderboard</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
