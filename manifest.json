@@ -1,0 +1,78 @@
+{
+  "name": "EduCode - Learn to Code for Free",
+  "short_name": "EduCode",
+  "description": "Master coding skills with interactive challenges, expert-led courses, and real-world projects. Learn DSA, Web Development, DBMS, and Python programming.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff5d7",
+  "theme_color": "#e85a4f",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "developer"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/e85a4f/ffffff?text=EC",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/e85a4f/ffffff?text=EduCode",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/1280x720/fff5d7/2b1b14?text=EduCode+Homepage",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://via.placeholder.com/750x1334/fff5d7/2b1b14?text=EduCode+Mobile",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Practice Problems",
+      "short_name": "Practice",
+      "description": "Solve coding problems",
+      "url": "/practice.html",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/96x96/e85a4f/ffffff?text=💻",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "short_name": "Learn",
+      "description": "Browse courses",
+      "url": "/course.html",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/96x96/e85a4f/ffffff?text=📚",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Progress",
+      "description": "View your progress",
+      "url": "/dashboard.html",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/96x96/e85a4f/ffffff?text=📊",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
